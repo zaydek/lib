@@ -6,8 +6,12 @@
 		"build": "rm -rf dist && yarn tsc",
 		"link-dist": "yarn build && cp package.json README.md dist && cd dist && npm link",
 		"unlink-dist": "npm unlink",
-		"publish-dist-dry-run": "yarn build && cp package.json README.md dist && cd dist && npm publish --dry-run",
-		"publish-dist": "yarn build && cp package.json README.md dist && cd dist && npm publish --access public"
+		"bump-patch": "npm version patch",
+		"bump-minor": "npm version minor",
+		"publish-dist-dry-run-patch": "yarn build && cp package.json README.md dist && cd dist && npm publish --dry-run",
+		"publish-dist-dry-run-minor": "yarn build && cp package.json README.md dist && cd dist && npm publish --dry-run",
+		"publish-dist-patch": "yarn build && cp package.json README.md dist && cd dist && npm publish",
+		"publish-dist-minor": "yarn build && cp package.json README.md dist && cd dist && npm publish"
 	},
 	"peerDependencies": {
 		"react": "^16.8.6",
