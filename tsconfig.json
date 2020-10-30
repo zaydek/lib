@@ -1,0 +1,16 @@
+// prettier-ignore
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"jsx": "react",      // Added
+		"declaration": true, // Added
+		"outDir": "./dist",  // Added
+		"rootDir": "./src",  // Added
+		"strict": true,
+		"baseUrl": "./src",  // Added
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true
+	}
+}
