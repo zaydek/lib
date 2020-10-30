@@ -15,6 +15,7 @@ yarn add @zaydek/lib
 - [`attrs/target_blank`](#target_blank)
 - [`components/DocumentTitle`](#DocumentTitle)
 - [`components/LayoutDocumentTitle`](#LayoutDocumentTitle)
+- [`hooks/useBreakpoints`](#useBreakpoints)
 
 ---
 
@@ -24,7 +25,7 @@ Attributes for disabling autocorrect.
 
 Read https://davidwalsh.name/disable-autocorrect for more information.
 
-Usage:
+**Usage:**
 
 <!-- prettier-ignore -->
 ```tsx
@@ -43,7 +44,7 @@ Attributes for safely opening an anchor in a separate page.
 
 Read https://mathiasbynens.github.io/rel-noopener for more information.
 
-Usage:
+**Usage:**
 
 <!-- prettier-ignore -->
 ```tsx
@@ -70,7 +71,7 @@ The `DocumentTitle` components declaratively render `document.title`. They can b
 
 The difference between `DocumentTitle` and `LayoutDocumentTitle` is simply whether `useEffect` or `useLayoutEffect` is used. `useLayoutEffect` renders _eagerly_ whereas `useEffect` renders _lazily_. If you don’t know what that means, use `DocumentTitle`.
 
-Usage:
+**Usage:**
 
 <!-- prettier-ignore -->
 ```tsx
@@ -90,6 +91,41 @@ import { DocumentTitle } from "@zaydek/lib/components"
 // ...
 
 <DocumentTitle title="..." />
+```
+
+---
+
+<a id="useBreakpoints" href="#useBreakpoints">`hooks/useBreakpoints`</a><br>
+
+Hook for conditionally rendering. The following breakpoints are used by default:
+
+```ts
+const defaultBreakpoints = {
+	xs: 40 * 16, // ->  640px
+	sm: 48 * 16, // ->  768px
+	md: 56 * 16, // ->  896px
+	lg: 64 * 16, // -> 1024px
+	xl: 80 * 16, // -> 1280px
+}
+```
+
+`useBreakpoints` simulates `@media (min-width: ...)`. This API is preferred over `className="hidden sm:block"`.
+
+You can parameterize breakpoints by passing an object with the same properties. Note that only `xs-xl` breakpoints are currently supported.
+
+**Usage:**
+
+```tsx
+import { useBreakpoints } from "@zaydek/lib/hooks"
+
+function Component() {
+	const screen = useBreakpoints()
+	return (
+		screen.sm && ( // @media (min-width: 768px) { ... }
+			...
+		)
+	)
+}
 ```
 
 ## License
