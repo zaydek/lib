@@ -32,6 +32,8 @@ For example:
 
 <!-- prettier-ignore -->
 ```jsx
+import { DocumentTitle } from "@zaydek/lib/components"
+
 function ComponentWithChildren({ children }) {
 	return (
 		<DocumentTitle title="...">
@@ -39,6 +41,10 @@ function ComponentWithChildren({ children }) {
 		</DocumentTitle>
 	)
 }
+```
+
+```jsx
+import { LayoutDocumentTitle } from "@zaydek/lib/components"
 
 function ComponentWithSideEffect() {
 	return <LayoutDocumentTitle title="..." />

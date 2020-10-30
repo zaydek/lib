@@ -1,17 +1,12 @@
 {
 	"name": "@zaydek/lib",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"scripts": {
 		"build": "rm -rf dist && yarn tsc",
 		"link-dist": "yarn build && cp package.json README.md dist && cd dist && npm link",
 		"unlink-dist": "npm unlink",
-		"bump-patch": "npm version patch",
-		"bump-minor": "npm version minor",
-		"publish-dist-dry-run-patch": "yarn build && cp package.json README.md dist && cd dist && npm publish --dry-run",
-		"publish-dist-dry-run-minor": "yarn build && cp package.json README.md dist && cd dist && npm publish --dry-run",
-		"publish-dist-patch": "yarn build && cp package.json README.md dist && cd dist && npm publish",
-		"publish-dist-minor": "yarn build && cp package.json README.md dist && cd dist && npm publish"
+		"publish-dist-dry-run": "yarn build && cp package.json README.md dist && cd dist && npm publish --dry-run && cd .."
 	},
 	"peerDependencies": {
 		"react": "^16.8.6",
