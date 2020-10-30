@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-interface Props {
+interface LayoutDocumentTitleProps {
 	title: string
 	children: JSX.Element
 }
@@ -15,7 +15,7 @@ interface Props {
 //
 // <DocumentTitle title="..." />
 //
-export default function DocumentTitle({ title, children }: Props): JSX.Element | null {
+export default function DocumentTitle({ title, children }: LayoutDocumentTitleProps): JSX.Element | null {
 	useEffect(() => {
 		const originalTitle = document.title
 		document.title = title
