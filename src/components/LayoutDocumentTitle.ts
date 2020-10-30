@@ -1,6 +1,6 @@
 import { useLayoutEffect } from "react"
 
-interface Props {
+interface DocumentTitleProps {
 	title: string
 	children: JSX.Element
 }
@@ -15,7 +15,7 @@ interface Props {
 //
 // <LayoutDocumentTitle title="..." />
 //
-export default function LayoutDocumentTitle({ title, children }: Props): JSX.Element | null {
+export default function LayoutDocumentTitle({ title, children }: DocumentTitleProps): JSX.Element | null {
 	useLayoutEffect(() => {
 		const originalTitle = document.title
 		document.title = title

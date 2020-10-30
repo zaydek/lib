@@ -1,18 +1,56 @@
 # @zaydek/lib
 
-`@zaydek/lib` is a typed standard library for personal use.
+`@zaydek/lib` is a typed standard library for personal use. Contributions and improvements are welcome as issues and or pull requests.
 
-To get started, run this command:
+To get started, simply run this command:
 
 ```bash
-yarn add --dev @zaydek/lib
-# npm install --save-dev @zaydek/lib
+yarn add @zaydek/lib
+# or npm i @zaydek/lib
 ```
 
 ## Table of Contents
 
+- [`attrs/disableAutoCorrect`](#disableAutoCorrect)
+- [`attrs/target_blank`](#target_blank)
 - [`components/DocumentTitle`](#DocumentTitle)
 - [`components/LayoutDocumentTitle`](#LayoutDocumentTitle)
+
+---
+
+<a id="disableAutoCorrect" href="#disableAutoCorrect">`attrs/disableAutoCorrect`</a><br>
+
+Attributes for disabling autocorrect.
+
+Read https://davidwalsh.name/disable-autocorrect for more information.
+
+Usage:
+
+```tsx
+import { disableAutoCorrect } from "@zaydek/lib/attrs"
+
+function Component() {
+	return <input type="text" {...disableAutoCorrect} />
+}
+```
+
+---
+
+<a id="target_blank" href="#target_blank">`attrs/target_blank`</a>
+
+Attributes for safely opening an anchor in a separate page.
+
+Read https://mathiasbynens.github.io/rel-noopener for more information.
+
+Usage:
+
+```tsx
+import { target_blank } from "@zaydek/lib/attrs"
+
+function Component() {
+	return <a href="..." {...target_blank} />
+}
+```
 
 ---
 
@@ -26,29 +64,30 @@ interface Props {
 }
 ```
 
-Wrapper or side-effect for setting `document.title`.
+The `DocumentTitle` components declaratively render `document.title`. They can be used as wrapper components or as side-effects.
 
-For example:
+The difference between `DocumentTitle` and `LayoutDocumentTitle` is simply whether `useEffect` or `useLayoutEffect` is used. `useLayoutEffect` renders _eagerly_ whereas `useEffect` renders _lazily_. If you don’t know what that means, use `DocumentTitle`.
+
+Usage:
 
 <!-- prettier-ignore -->
-```jsx
+```tsx
 import { DocumentTitle } from "@zaydek/lib/components"
 
-function ComponentWithChildren({ children }) {
-	return (
-		<DocumentTitle title="...">
-			{children}
-		</DocumentTitle>
-	)
-}
+// ...
+
+<DocumentTitle title="...">
+	{children}
+</DocumentTitle>
 ```
 
-```jsx
-import { LayoutDocumentTitle } from "@zaydek/lib/components"
+<!-- prettier-ignore -->
+```tsx
+import { DocumentTitle } from "@zaydek/lib/components"
 
-function ComponentWithSideEffect() {
-	return <LayoutDocumentTitle title="..." />
-}
+// ...
+
+<DocumentTitle title="..." />
 ```
 
 ## License
