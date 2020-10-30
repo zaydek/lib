@@ -26,12 +26,13 @@ Read https://davidwalsh.name/disable-autocorrect for more information.
 
 Usage:
 
+<!-- prettier-ignore -->
 ```tsx
 import { disableAutoCorrect } from "@zaydek/lib/attrs"
 
-function Component() {
-	return <input type="text" {...disableAutoCorrect} />
-}
+// ...
+
+<input type="text" {...disableAutoCorrect} />
 ```
 
 ---
@@ -44,12 +45,13 @@ Read https://mathiasbynens.github.io/rel-noopener for more information.
 
 Usage:
 
+<!-- prettier-ignore -->
 ```tsx
 import { target_blank } from "@zaydek/lib/attrs"
 
-function Component() {
-	return <a href="..." {...target_blank} />
-}
+// ...
+
+<a href="..." {...target_blank} />
 ```
 
 ---
@@ -58,7 +60,7 @@ function Component() {
 <a id="LayoutDocumentTitle" href="#LayoutDocumentTitle">`components/LayoutDocumentTitle`</a>
 
 ```ts
-interface Props {
+interface DocumentTitleProps {
 	title: string
 	children: JSX.Element
 }
