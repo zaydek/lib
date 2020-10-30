@@ -16,8 +16,8 @@ yarn add --dev @zaydek/lib
 
 ---
 
-- <a id="DocumentTitle">`components/DocumentTitle`</a>
-- <a id="LayoutDocumentTitle">`components/LayoutDocumentTitle`</a>
+<a id="DocumentTitle" href="#DocumentTitle">`components/DocumentTitle`</a><br>
+<a id="LayoutDocumentTitle" href="#LayoutDocumentTitle">`components/LayoutDocumentTitle`</a>
 
 ```ts
 interface Props {
