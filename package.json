@@ -4,8 +4,8 @@
 	"license": "MIT",
 	"scripts": {
 		"build": "rm -rf dist && yarn tsc && cp package.json README.md dist",
-		"link-dist": "yarn build && cd dist && npm link",
-		"unlink-dist": "npm unlink",
+		"link-dist": "yarn build && cd dist && yarn link",
+		"unlink-dist": "yarn unlink",
 		"publish-dist-dry-run": "yarn build && cp package.json README.md dist && cd dist && npm publish --dry-run && cd .."
 	},
 	"peerDependencies": {

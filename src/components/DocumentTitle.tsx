@@ -1,9 +1,5 @@
+import React from "react"
 import { useEffect } from "react"
-
-interface LayoutDocumentTitleProps {
-	title: string
-	children: JSX.Element
-}
 
 // Ex:
 //
@@ -15,13 +11,18 @@ interface LayoutDocumentTitleProps {
 //
 // <DocumentTitle title="..." />
 //
-export default function DocumentTitle({ title, children }: LayoutDocumentTitleProps): JSX.Element | null {
+interface Props {
+	title: string
+	children?: React.ReactNode
+}
+
+export default function DocumentTitle(props: Props) {
 	useEffect(() => {
 		const originalTitle = document.title
-		document.title = title
+		document.title = props.title
 		return () => {
 			document.title = originalTitle
 		}
-	}, [title])
-	return children || null
+	}, [props.title])
+	return <>{props.children}</>
 }

@@ -15,6 +15,8 @@ yarn add @zaydek/lib
 - [`attrs/target_blank`](#target_blank)
 - [`components/DocumentTitle`](#DocumentTitle)
 - [`components/LayoutDocumentTitle`](#LayoutDocumentTitle)
+- [`components/Switch`](#Switch)
+- [`components/Case`](#Case)
 - [`hooks/useBreakpoints`](#useBreakpoints)
 
 ---
@@ -31,9 +33,7 @@ Read https://davidwalsh.name/disable-autocorrect for more information.
 ```tsx
 import { disableAutoCorrect } from "@zaydek/lib/attrs"
 
-// ...
-
-<input type="text" {...disableAutoCorrect} />
+<input type="text" {…disableAutoCorrect} />
 ```
 
 ---
@@ -50,9 +50,7 @@ Read https://mathiasbynens.github.io/rel-noopener for more information.
 ```tsx
 import { target_blank } from "@zaydek/lib/attrs"
 
-// ...
-
-<a href="..." {...target_blank} />
+<a href="…" {…target_blank} />
 ```
 
 ---
@@ -61,9 +59,9 @@ import { target_blank } from "@zaydek/lib/attrs"
 <a id="LayoutDocumentTitle" href="#LayoutDocumentTitle">`components/LayoutDocumentTitle`</a>
 
 ```ts
-interface DocumentTitleProps {
+interface Props {
 	title: string
-	children: JSX.Element
+	children?: React.ReactNode
 }
 ```
 
@@ -77,9 +75,7 @@ The difference between `DocumentTitle` and `LayoutDocumentTitle` is simply wheth
 ```tsx
 import { DocumentTitle } from "@zaydek/lib/components"
 
-// ...
-
-<DocumentTitle title="...">
+<DocumentTitle title="…">
 	{children}
 </DocumentTitle>
 ```
@@ -88,10 +84,35 @@ import { DocumentTitle } from "@zaydek/lib/components"
 ```tsx
 import { DocumentTitle } from "@zaydek/lib/components"
 
-// ...
-
-<DocumentTitle title="..." />
+<DocumentTitle title="…" />
 ```
+
+---
+
+<a id="Switch" href="#Switch">`components/Switch`</a><br>
+<a id="Case" href="#Case">`components/Case`</a><br>
+
+Renders a switch-case expression using JSX. `<Default>` is not currently supported.
+
+**Usage:**
+
+```tsx
+import { Switch, Case } from "@zaydek/lib/components"
+
+<Switch on={…}>
+  <Case case={…}>
+    …
+  <Case>
+  <Case case={…}>
+    …
+  <Case>
+  <Case case={…}>
+    …
+  <Case>
+</Switch>
+```
+
+**Note:** `<Switch>` and `<Case>` are implemented using generics. This means you can use `<Switch<string>>` to enforce type-correctness for `on={…}` or `<Case<string>>` for `case={…}`. Note that `<Switch<string>>` **does not** enforce type-correctness for children `<Case>` elements.
 
 ---
 
@@ -109,9 +130,9 @@ const defaultBreakpoints = {
 }
 ```
 
-`useBreakpoints` simulates `@media (min-width: ...)`. This API is preferred over `className="hidden sm:block"`.
+`useBreakpoints` simulates `@media (min-width: …)`. This API is preferred over `className="hidden sm:block"`.
 
-You can parameterize breakpoints by passing an object with the same properties. Note that only `xs-xl` breakpoints are currently supported.
+You can parameterize breakpoints by passing a `Breakpoints` object. Note that only `xs-xl` breakpoints are supported.
 
 **Usage:**
 
@@ -121,8 +142,8 @@ import { useBreakpoints } from "@zaydek/lib/hooks"
 function Component() {
 	const screen = useBreakpoints()
 	return (
-		screen.sm && ( // @media (min-width: 768px) { ... }
-			...
+		screen.sm && ( // @media (min-width: 768px) { … }
+			…
 		)
 	)
 }

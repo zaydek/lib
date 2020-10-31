@@ -1,5 +1,13 @@
 import { useLayoutEffect, useState } from "react"
 
+interface Breakpoints {
+	xs: number
+	sm: number
+	md: number
+	lg: number
+	xl: number
+}
+
 const defaultBreakpoints = {
 	xs: 40 * 16, // ->  640px
 	sm: 48 * 16, // ->  768px
@@ -19,7 +27,7 @@ const defaultBreakpoints = {
 //   )
 // }
 //
-export default function useBreakpoints(breakpoints = defaultBreakpoints) {
+export default function useBreakpoints(breakpoints: Breakpoints = defaultBreakpoints) {
 	const [xs, setXS] = useState(true)
 	const [sm, setSM] = useState(true)
 	const [md, setMD] = useState(true)
