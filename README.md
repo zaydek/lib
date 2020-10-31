@@ -33,7 +33,7 @@ Read https://davidwalsh.name/disable-autocorrect for more information.
 ```tsx
 import { disableAutoCorrect } from "@zaydek/lib/attrs"
 
-<input type="text" {…disableAutoCorrect} />
+<input type="text" {...disableAutoCorrect} />
 ```
 
 ---
@@ -50,7 +50,7 @@ Read https://mathiasbynens.github.io/rel-noopener for more information.
 ```tsx
 import { target_blank } from "@zaydek/lib/attrs"
 
-<a href="…" {…target_blank} />
+<a href="…" {...target_blank} />
 ```
 
 ---
