@@ -50,7 +50,7 @@ Read https://mathiasbynens.github.io/rel-noopener for more information.
 ```tsx
 import { target_blank } from "@zaydek/lib/attrs"
 
-<a href="…" {...target_blank} />
+<a href="..." {...target_blank} />
 ```
 
 ---
@@ -75,7 +75,7 @@ The difference between `DocumentTitle` and `LayoutDocumentTitle` is simply wheth
 ```tsx
 import { DocumentTitle } from "@zaydek/lib/components"
 
-<DocumentTitle title="…">
+<DocumentTitle title="...">
 	{children}
 </DocumentTitle>
 ```
@@ -84,7 +84,7 @@ import { DocumentTitle } from "@zaydek/lib/components"
 ```tsx
 import { DocumentTitle } from "@zaydek/lib/components"
 
-<DocumentTitle title="…" />
+<DocumentTitle title="..." />
 ```
 
 ---
@@ -99,20 +99,20 @@ Renders a switch-case expression using JSX. `<Default>` is not currently support
 ```tsx
 import { Switch, Case } from "@zaydek/lib/components"
 
-<Switch on={…}>
-  <Case case={…}>
-    …
+<Switch on={...}>
+  <Case case={...}>
+    ...
   <Case>
-  <Case case={…}>
-    …
+  <Case case={...}>
+    ...
   <Case>
-  <Case case={…}>
-    …
+  <Case case={...}>
+    ...
   <Case>
 </Switch>
 ```
 
-**Note:** `<Switch>` and `<Case>` are implemented using generics. This means you can use `<Switch<string>>` to enforce type-correctness for `on={…}` or `<Case<string>>` for `case={…}`. Note that `<Switch<string>>` **does not** enforce type-correctness for children `<Case>` elements.
+**Note:** `<Switch>` and `<Case>` are implemented using generics. This means you can use `<Switch<string>>` to enforce type-correctness for `on={...}` or `<Case<string>>` for `case={...}`. Note that `<Switch<string>>` **does not** enforce type-correctness for children `<Case>` elements.
 
 ---
 
@@ -130,7 +130,7 @@ const defaultBreakpoints = {
 }
 ```
 
-`useBreakpoints` simulates `@media (min-width: …)`. This API is preferred over `className="hidden sm:block"`.
+`useBreakpoints` simulates `@media (min-width: ...)`. This API is preferred over `className="hidden sm:block"`.
 
 You can parameterize breakpoints by passing a `Breakpoints` object. Note that only `xs-xl` breakpoints are supported.
 
@@ -142,8 +142,8 @@ import { useBreakpoints } from "@zaydek/lib/hooks"
 function Component() {
 	const screen = useBreakpoints()
 	return (
-		screen.sm && ( // @media (min-width: 768px) { … }
-			…
+		screen.sm && ( // @media (min-width: 768px) { ... }
+			...
 		)
 	)
 }
