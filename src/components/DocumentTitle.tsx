@@ -11,12 +11,12 @@ import { useEffect } from "react"
 //
 // <DocumentTitle title="..." />
 //
-interface Props {
+interface DocumentTitleProps {
 	title: string
 	children?: React.ReactNode
 }
 
-export default function DocumentTitle(props: Props) {
+export default function DocumentTitle(props: DocumentTitleProps) {
 	useEffect(() => {
 		const originalTitle = document.title
 		document.title = props.title

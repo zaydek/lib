@@ -11,12 +11,12 @@ import { useLayoutEffect } from "react"
 //
 // <LayoutDocumentTitle title="..." />
 //
-interface Props {
+interface LayoutDocumentTitleProps {
 	title: string
 	children?: React.ReactNode
 }
 
-export default function LayoutDocumentTitle(props: Props) {
+export default function LayoutDocumentTitle(props: LayoutDocumentTitleProps) {
 	useLayoutEffect(() => {
 		const originalTitle = document.title
 		document.title = props.title
