@@ -31,7 +31,7 @@ Read https://davidwalsh.name/disable-autocorrect for more information.
 
 <!-- prettier-ignore -->
 ```tsx
-import { disableAutoCorrect } from "@zaydek/lib/attrs"
+import { disableAutoCorrect } from "@zaydek/lib/dist/attrs"
 
 <input type="text" {...disableAutoCorrect} />
 ```
@@ -48,7 +48,7 @@ Read https://mathiasbynens.github.io/rel-noopener for more information.
 
 <!-- prettier-ignore -->
 ```tsx
-import { target_blank } from "@zaydek/lib/attrs"
+import { target_blank } from "@zaydek/lib/dist/attrs"
 
 <a href="..." {...target_blank} />
 ```
@@ -73,7 +73,7 @@ The difference between `DocumentTitle` and `LayoutDocumentTitle` is simply wheth
 
 <!-- prettier-ignore -->
 ```tsx
-import { DocumentTitle } from "@zaydek/lib/components"
+import { DocumentTitle } from "@zaydek/lib/dist/components"
 
 <DocumentTitle title="...">
 	{children}
@@ -82,7 +82,7 @@ import { DocumentTitle } from "@zaydek/lib/components"
 
 <!-- prettier-ignore -->
 ```tsx
-import { DocumentTitle } from "@zaydek/lib/components"
+import { DocumentTitle } from "@zaydek/lib/dist/components"
 
 <DocumentTitle title="..." />
 ```
@@ -97,7 +97,7 @@ Renders a switch-case expression using JSX. `<Default>` is not currently support
 **Usage:**
 
 ```tsx
-import { Switch, Case } from "@zaydek/lib/components"
+import { Switch, Case } from "@zaydek/lib/dist/components"
 
 <Switch on={...}>
   <Case case={...}>
@@ -137,7 +137,7 @@ You can parameterize breakpoints by passing a `Breakpoints` object. Note that on
 **Usage:**
 
 ```tsx
-import { useBreakpoints } from "@zaydek/lib/hooks"
+import { useBreakpoints } from "@zaydek/lib/dist/hooks"
 
 function Component() {
 	const screen = useBreakpoints()
