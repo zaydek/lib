@@ -122,11 +122,11 @@ Hook for conditionally rendering. The following breakpoints are used by default:
 
 ```ts
 const defaultBreakpoints = {
-	xs: 40 * 16, // ->  640px
-	sm: 48 * 16, // ->  768px
-	md: 56 * 16, // ->  896px
-	lg: 64 * 16, // -> 1024px
-	xl: 80 * 16, // -> 1280px
+	xs: 40 * 16, // ->  512
+	sm: 48 * 16, // ->  640
+	md: 56 * 16, // ->  768
+	lg: 64 * 16, // -> 1024
+	xl: 80 * 16, // -> 1280
 }
 ```
 

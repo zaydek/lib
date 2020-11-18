@@ -19,14 +19,15 @@ const defaultBreakpoints = {
 // Ex:
 //
 // function Component() {
-//   const { sm } = useBreakpoints()
+//   const screen = useBreakpoints()
 //   return (
-//     sm && (
+//     screen.sm && (
 //       ...
 //     )
 //   )
 // }
 //
+// TODO: Add support for more than `xs-xl` breakpoints.
 export default function useBreakpoints(breakpoints: Breakpoints = defaultBreakpoints) {
 	const [xs, setXS] = useState(true)
 	const [sm, setSM] = useState(true)
