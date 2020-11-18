@@ -28,6 +28,8 @@ const defaultBreakpoints = {
 // }
 //
 // TODO: Add support for more than `xs-xl` breakpoints.
+// TODO: Add tests.
+//
 export default function useBreakpoints(breakpoints: Breakpoints = defaultBreakpoints) {
 	const [xs, setXS] = useState(true)
 	const [sm, setSM] = useState(true)

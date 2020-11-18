@@ -11,6 +11,8 @@ import { useLayoutEffect } from "react"
 //
 // <LayoutDocumentTitle title="..." />
 //
+// TODO: Add tests.
+//
 interface LayoutDocumentTitleProps {
 	title: string
 	children?: React.ReactNode

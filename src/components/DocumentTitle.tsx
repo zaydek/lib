@@ -11,6 +11,8 @@ import { useEffect } from "react"
 //
 // <DocumentTitle title="..." />
 //
+// TODO: Add tests.
+//
 interface DocumentTitleProps {
 	title: string
 	children?: React.ReactNode

@@ -29,6 +29,8 @@ export function Case<T>(props: CaseProps<T>) {
 //   <Case>
 // </Switch>
 //
+// TODO: Add tests.
+//
 interface SwitchProps<T> {
 	on: T
 	children: React.ReactElement<CaseProps<T>>[]
