@@ -127,8 +127,9 @@ type-correctness for children `<Case>` elements.
 Helper to declaratively generate a range. A range is simply an array of numbers, generally integers.
 
 ```ts
-function range(to: number): number[]
+import { range } from "@zaydek/lib/dist/helpers"
 
+// function range(to: number): number[]
 range(1) // -> [0]
 range(2) // -> [0, 1]
 range(4) // -> [0, 1, 2, 3]
@@ -136,14 +137,16 @@ range(8) // -> [0, 1, 2, 3, 4, 5, 6, 7]
 ```
 
 ```ts
-function range(from: number, to: number): number[]
+import { range } from "@zaydek/lib/dist/helpers"
 
+// function range(from: number, to: number): number[]
 range(4, 8) // -> [4, 5, 6, 7]
 ```
 
 ```ts
-function range(from: number, to: number, step: number): number[]
+import { range } from "@zaydek/lib/dist/helpers"
 
+// function range(from: number, to: number, step: number): number[]
 range(4, 8, 2) // -> [4, 6]
 ```
 
