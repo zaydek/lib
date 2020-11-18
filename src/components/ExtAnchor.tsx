@@ -1,5 +1,5 @@
 import React from "react"
-import { target_blank } from "src/attrs"
+import { target_blank } from "../attrs" // TODO: Change to absolute imports?
 
 // Ex:
 //
