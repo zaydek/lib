@@ -18,6 +18,7 @@ yarn add @zaydek/lib
 - [`components/LayoutDocumentTitle`](#LayoutDocumentTitle)
 - [`components/ExtAnchor`](#ExtAnchor)
 - [`components/Switch`](#Switch)
+- [`components/SVG`](#SVG)
 - [`components/Case`](#Case)
 - [`helpers/range`](#range)
 - [`hooks/useBreakpoints`](#useBreakpoints)
@@ -109,7 +110,9 @@ import { ExtAnchor } from "@zaydek/lib/dist/components"
 
 ---
 
-<a id="Switch" href="#Switch">`components/Switch`</a><br> <a id="Case" href="#Case">`components/Case`</a><br>
+<!-- prettier-ignore -->
+<a id="Switch" href="#Switch">`components/Switch`</a><br>
+<a id="Case" href="#Case">`components/Case`</a><br>
 
 Renders a switch-case expression using JSX. `<Default>` is not currently supported.
 

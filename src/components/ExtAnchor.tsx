@@ -1,5 +1,9 @@
 import React from "react"
-import { target_blank } from "../attrs" // TODO: Change to absolute imports?
+import { target_blank } from "../attrs"
+
+interface ExtAnchorProps extends React.ComponentProps<"a"> {
+	href: string
+}
 
 // Ex:
 //
@@ -7,6 +11,6 @@ import { target_blank } from "../attrs" // TODO: Change to absolute imports?
 // -> <a href="TODO" {...target_blank}>Hello, world!</ExtAnchor>
 //
 // TODO: Make `href` required?
-export default function ExtAnchor(props: React.ComponentProps<"a">) {
-	return <a {...props} {...target_blank} />
+export default function ExtAnchor({ href, ...props }: ExtAnchorProps) {
+	return <a href={href} {...props} {...target_blank} />
 }
