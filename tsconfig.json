@@ -30,10 +30,10 @@
 	"include": [
 		"src/**/*.ts",
 		"src/**/*.tsx",
-		"jest.setupFile.ts" // TODO: Remove??
+		"jest.setupFile.ts", // TODO: Remove??
 	],
 	"exclude": [
 		"src/**/*.test.*",
-		"src/**/setupFile.ts"
-	]
+		"src/**/setupFile.ts",
+	],
 }
