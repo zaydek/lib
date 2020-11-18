@@ -24,5 +24,6 @@ export default function LayoutDocumentTitle(props: LayoutDocumentTitleProps) {
 			document.title = originalTitle
 		}
 	}, [props.title])
+
 	return <>{props.children}</>
 }

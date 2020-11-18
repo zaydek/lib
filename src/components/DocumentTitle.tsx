@@ -24,5 +24,6 @@ export default function DocumentTitle(props: DocumentTitleProps) {
 			document.title = originalTitle
 		}
 	}, [props.title])
+
 	return <>{props.children}</>
 }
