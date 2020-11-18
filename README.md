@@ -18,6 +18,7 @@ yarn add @zaydek/lib
 - [`components/LayoutDocumentTitle`](#LayoutDocumentTitle)
 - [`components/Switch`](#Switch)
 - [`components/Case`](#Case)
+- [`helpers/range`](#range)
 - [`hooks/useBreakpoints`](#useBreakpoints)
 
 ---
@@ -118,6 +119,37 @@ import { Switch, Case } from "@zaydek/lib/dist/components"
 **Note:** `<Switch>` and `<Case>` are implemented using generics. This means you can use `<Switch<string>>` to enforce
 type-correctness for `on={...}` or `<Case<string>>` for `case={...}`. Note that `<Switch<string>>` **does not** enforce
 type-correctness for children `<Case>` elements.
+
+---
+
+<a id="range" href="#range">`helpers/range`</a><br>
+
+Helper for declaratively generating ranges, e.g. an array of numbers.
+
+`range` uses function overloading in TypeScript so that multiple parameters can be specified as needed.
+
+There are currently three prototypes for interacting with `range`:
+
+```ts
+function range(to: number): number[]
+
+range(1) // -> [0]
+range(2) // -> [0, 1]
+range(4) // -> [0, 1, 2, 3]
+range(8) // -> [0, 1, 2, 3, 4, 5, 6, 7]
+```
+
+```ts
+function range(from: number, to: number): number[]
+
+range(4, 8) // -> [4, 5, 6, 7]
+```
+
+```ts
+function range(from: number, to: number, step: number): number[]
+
+range(4, 8, 2) // -> [4, 6]
+```
 
 ---
 
