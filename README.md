@@ -124,11 +124,7 @@ type-correctness for children `<Case>` elements.
 
 <a id="range" href="#range">`helpers/range`</a><br>
 
-Helper for declaratively generating ranges, e.g. an array of numbers.
-
-`range` uses function overloading in TypeScript so that multiple parameters can be specified as needed.
-
-There are currently three prototypes for interacting with `range`:
+Helper to declaratively generate a range. A range is simply an array of numbers, generally integers.
 
 ```ts
 function range(to: number): number[]
