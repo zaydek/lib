@@ -1,6 +1,7 @@
 # @zaydek/lib
 
-`@zaydek/lib` is a typed standard library for personal use. Contributions and improvements are welcome as issues and or pull requests.
+`@zaydek/lib` is a typed standard library for personal use. Contributions and improvements are welcome as issues and or
+pull requests.
 
 To get started, simply run this command:
 
@@ -65,9 +66,12 @@ interface Props {
 }
 ```
 
-The `DocumentTitle` components declaratively render `document.title`. They can be used as wrapper components or as side-effects.
+The `DocumentTitle` components declaratively render `document.title`. They can be used as wrapper components or as
+side-effects.
 
-The difference between `DocumentTitle` and `LayoutDocumentTitle` is simply whether `useEffect` or `useLayoutEffect` is used. `useLayoutEffect` renders _eagerly_ whereas `useEffect` renders _lazily_. If you don’t know what that means, use `DocumentTitle`.
+The difference between `DocumentTitle` and `LayoutDocumentTitle` is simply whether `useEffect` or `useLayoutEffect` is
+used. `useLayoutEffect` renders _eagerly_ whereas `useEffect` renders _lazily_. If you don’t know what that means, use
+`DocumentTitle`.
 
 **Usage:**
 
@@ -89,8 +93,7 @@ import { DocumentTitle } from "@zaydek/lib/dist/components"
 
 ---
 
-<a id="Switch" href="#Switch">`components/Switch`</a><br>
-<a id="Case" href="#Case">`components/Case`</a><br>
+<a id="Switch" href="#Switch">`components/Switch`</a><br> <a id="Case" href="#Case">`components/Case`</a><br>
 
 Renders a switch-case expression using JSX. `<Default>` is not currently supported.
 
@@ -112,7 +115,9 @@ import { Switch, Case } from "@zaydek/lib/dist/components"
 </Switch>
 ```
 
-**Note:** `<Switch>` and `<Case>` are implemented using generics. This means you can use `<Switch<string>>` to enforce type-correctness for `on={...}` or `<Case<string>>` for `case={...}`. Note that `<Switch<string>>` **does not** enforce type-correctness for children `<Case>` elements.
+**Note:** `<Switch>` and `<Case>` are implemented using generics. This means you can use `<Switch<string>>` to enforce
+type-correctness for `on={...}` or `<Case<string>>` for `case={...}`. Note that `<Switch<string>>` **does not** enforce
+type-correctness for children `<Case>` elements.
 
 ---
 
