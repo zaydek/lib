@@ -16,6 +16,7 @@ yarn add @zaydek/lib
 - [`attrs/target_blank`](#target_blank)
 - [`components/DocumentTitle`](#DocumentTitle)
 - [`components/LayoutDocumentTitle`](#LayoutDocumentTitle)
+- [`components/ExtAnchor`](#ExtAnchor)
 - [`components/Switch`](#Switch)
 - [`components/Case`](#Case)
 - [`helpers/range`](#range)
@@ -90,6 +91,20 @@ import { DocumentTitle } from "@zaydek/lib/dist/components"
 import { DocumentTitle } from "@zaydek/lib/dist/components"
 
 <DocumentTitle title="..." />
+```
+
+---
+
+<a id="ExtAnchor" href="#ExtAnchor">`components/ExtAnchor`</a><br>
+
+An `<ExtAnchor>` is simply an `<a>` with `target_blank` destructured.
+
+<!-- prettier-ignore -->
+```tsx
+import { ExtAnchor } from "@zaydek/lib/dist/components"
+
+<ExtAnchor href="TODO">Hello, world!</ExtAnchor>
+// <a href="TODO" target="_blank" rel="noopener noreferrer">Hello, world!</a>
 ```
 
 ---
