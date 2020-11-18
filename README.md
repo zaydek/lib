@@ -104,7 +104,7 @@ An `<ExtAnchor>` is simply an `<a>` with `target_blank` destructured.
 import { ExtAnchor } from "@zaydek/lib/dist/components"
 
 <ExtAnchor href="TODO">Hello, world!</ExtAnchor>
-// <a href="TODO" target="_blank" rel="noopener noreferrer">Hello, world!</a>
+// -> <a href="TODO" target="_blank" rel="noopener noreferrer">Hello, world!</a>
 ```
 
 ---
