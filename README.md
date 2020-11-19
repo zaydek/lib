@@ -179,7 +179,7 @@ Helpers for converting between `kebab-case` and `TitleCase`.
 
 <!-- prettier-ignore -->
 ```ts
-import { toKebabCase, toTitleCase } from "@zaydek/lib/helpers"
+import { toKebabCase, toTitleCase } from "@zaydek/lib/dist/helpers"
 
 toKebabCase("HelloWorld")  // "hello-world"
 toTitleCase("hello-world") // "HelloWorld"
