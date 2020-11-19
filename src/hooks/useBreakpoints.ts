@@ -1,4 +1,5 @@
-import { useLayoutEffect, useState } from "react"
+import useIsomorphicLayoutEffect from "./useIsomorphicLayoutEffect"
+import { useState } from "react"
 
 interface Breakpoints {
 	xs: number
@@ -35,7 +36,7 @@ export default function useBreakpoints(breakpoints: Breakpoints = defaultBreakpo
 	const [lg, setLG] = useState(true)
 	const [xl, setXL] = useState(true)
 
-	useLayoutEffect(() => {
+	useIsomorphicLayoutEffect(() => {
 		function handleResize() {
 			setXS(window.innerWidth >= breakpoints.xs)
 			setSM(window.innerWidth >= breakpoints.sm)
