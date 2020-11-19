@@ -5,10 +5,14 @@ const ERR_STEP_LT_0 = "range: `step` must be greater than `0`"
 
 // Ex:
 //
+// range(0) // -> []
 // range(1) // -> [0]
 // range(2) // -> [0, 2]
 // range(4) // -> [0, 1, 2, 3]
 // range(8) // -> [0, 1, 2, 3, 4, 5, 6, 7]
+//
+// range(4, 4) // -> []
+// range(4, 8) // -> [4, 5, 6, 7]
 //
 export default function range(to: number): number[]
 export default function range(from: number, to: number): number[]
