@@ -21,6 +21,8 @@ yarn add @zaydek/lib
 - [`components/SVG`](#SVG)
 - [`components/Case`](#Case)
 - [`helpers/range`](#range)
+- [`helpers/toKebabCase`](#toKebabCase)
+- [`helpers/toTitleCase`](#toTitleCase)
 - [`hooks/useBreakpoints`](#useBreakpoints)
 
 ---
@@ -166,6 +168,21 @@ import { range } from "@zaydek/lib/dist/helpers"
 
 // function range(from: number, to: number, step: number): number[]
 range(4, 8, 2) // -> [4, 6]
+```
+
+---
+
+<a id="toKebabCase" href="#toKebabCase">`helpers/toKebabCase`</a><br>
+<a id="toTitleCase" href="#toTitleCase">`helpers/toTitleCase`</a><br>
+
+Helpers for converting between `kebab-case` and `TitleCase`.
+
+<!-- prettier-ignore -->
+```ts
+import { toKebabCase, toTitleCase } from "@zaydek/lib/helpers"
+
+toKebabCase("HelloWorld")  // "hello-world"
+toTitleCase("hello-world") // "HelloWorld"
 ```
 
 ---
